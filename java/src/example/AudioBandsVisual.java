@@ -1,5 +1,7 @@
 package example;
 
+import d22124576.BasakVisual;
+//import d22124576.BasakVisual;
 import processing.core.*;
 
 // This is an example of a visual that uses the audio bands
@@ -7,10 +9,14 @@ public class AudioBandsVisual
 {
     MyVisual mv;
 
-    public AudioBandsVisual(MyVisual mv)
+    public AudioBandsVisual(MyVisual myVisual)
     {
-        this.mv = mv; 
+        this.mv = myVisual; 
     }
+
+    /*public AudioBandsVisual(BasakVisual basakVisual) {
+        //TODO Auto-generated constructor stub
+    }*/
 
     public void render()
     {

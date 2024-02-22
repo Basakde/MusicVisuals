@@ -7,20 +7,20 @@ public class MyVisual extends Visual {
     AudioBandsVisual abv;
 
     public void settings() {
-        size(1024, 500);
+        //size(1024, 500);
 
         // Use this to make fullscreen
         // fullScreen();
 
         // Use this to make fullscreen and use P3D for 3D graphics
-        // fullScreen(P3D, SPAN);
+       fullScreen(P3D, SPAN);
     }
 
     public void setup() {
         startMinim();
 
         // Call loadAudio to load an audio file to process
-        // loadAudio("heroplanet.mp3");
+        //loadAudio("heroplanet.mp3");
 
         // Call this instead to read audio from the microphone
         startListening();

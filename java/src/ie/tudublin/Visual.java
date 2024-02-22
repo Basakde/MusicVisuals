@@ -7,7 +7,7 @@ import ddf.minim.analysis.FFT;
 public abstract class Visual extends PApplet
 {
 	private int frameSize = 512;
-	private int sampleRate = 44100;
+	private int sampleRate = 50000;
 
 	private float[] bands;
 	private float[] smoothedBands;
@@ -60,7 +60,7 @@ public abstract class Visual extends PApplet
 			total += abs(ab.get(i));
 		}
 		amplitude = total / ab.size();
-		smothedAmplitude = PApplet.lerp(smothedAmplitude, amplitude, 0.1f);
+		smothedAmplitude = PApplet.lerp(smothedAmplitude, amplitude, 0.3f);
 	}
 
 
