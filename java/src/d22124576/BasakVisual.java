@@ -56,44 +56,46 @@ public class BasakVisual extends Visual {
             background(0);
             noFill();
             lights();
+            //for(int j=0; j<5; j++)
+            //{
 
-            for(int i=0;i<10;i++){
-                stroke(map(getSmoothedAmplitude(), 0, 1, 0, 90)*i, 255, 255);
-                camera(cameraX*i, i*800, value, // Position of the camera
-         (i*10)/2, (i*10)/2, 0, // Point the camera towards the center of the sketch
+              for(int i=0;i<5;i++)
+            {
+                
+                stroke(map(getSmoothedAmplitude(), 0, 1, 0, 300)*i, 255, 255);
+                camera(cameraX, i*1000, 300, // Position of the camera
+         (i*10), (i*10), 0, // Point the camera towards the center of the sketch
          0, 1, 0);
-               cameraX += i;
+               cameraX += 0.5;
                
                if (cameraX > width) {
                 cameraX = -width;
             }
 
-
-             // Upward direction
-            
-            //cameraX += 1; // Adjust the speed of movement by changing the increment value
-  
-         // Reset the camera position when it moves out of the screen
-           /*if (cameraX > width) {
-            cameraX = -width; // Move the camera back to the left side of the screen
-           }*/
  
            translate(0, 0, -250);
            float boxSize = 50 + (getAmplitude() * 100);
                 
          //map(average, 0, 1, 100, 400); 
-           smoothedBoxSize = lerp(smoothedBoxSize, boxSize, 0.2f);        
+           smoothedBoxSize = lerp(smoothedBoxSize, boxSize, 0.3f);        
          
-           rotateY(angle*10);
-           rotateX(angle*5);
-             //strokeWeight(1);
-           sphere(smoothedBoxSize/2);            
-           strokeWeight(5);
-             
-         //box(smoothedBoxSize);
+           rotateY(angle*2);
+           rotateX(angle*2);
+           //rotateZ(angle*2);
+            //strokeWeight(1);
+           box(smoothedBoxSize/2);
+           sphere(10);
+           //sphere(smoothedBoxSize)     ;       
+           strokeWeight(2);
+
+
+           box(smoothedBoxSize);
+           box(smoothedBoxSize*1.5f);
+           box(smoothedBoxSize*2.5f);
+           //cube(smoothedBoxSize);
          
          
-            angle += 0.01f;
+            angle += 0.03f;
         
        
             camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
@@ -106,10 +108,16 @@ public class BasakVisual extends Visual {
         
   
        // Increase or decrease the camera's x-coordinate
+
+                
        
-    }
+            }
+
+            }
+            
+        }
     
-}
-} 
+    //}
+ 
     
     
