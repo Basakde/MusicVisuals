@@ -31,7 +31,7 @@ public class CubeVisual extends Visual
     public void setup()
     {
         colorMode(HSB);
-        noCursor();
+        //noCursor();
         
         setFrameSize(256);
 
@@ -51,6 +51,7 @@ public class CubeVisual extends Visual
         noFill();
         lights();
         stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        
         camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
         translate(0, 0, -250);
                
